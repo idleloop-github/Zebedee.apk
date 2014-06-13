@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zebedee</string>
+    <string name="menu_settings">Settings</string>
+    <string name="filename">zebedee_parameters.txt</string>
+    <string name="filename_label">choose zebedee parameters file</string>
+    <string name="label_off">click to start zebedee</string>
+    <string name="label_on">click to close app</string>
+    <string name="initiallogtext">[zebedee port to android]\n\nversion 0.2\nzebedee (jzbd) ported to Android platform by idleloop: \n  www.angelfire.com/ego2/idleloop\n  idleloop@yahoo.com\n\nOriginal program at: \n  www.winton.org.uk/zebedee\nZebedee\'s java version (jzbd) at: \n  sourceforge.net/projects/zebedee\n\nAll licensed under \nGNU General Public License (GPL)\n</string>
+	<string name="filebrowser_name">select zebedee parameters file</string>
+	<string name="submenu_about">About&#8230;</string>
+	<string name="submenu_exit">Exit</string>
+	<string name="about_description_header">Zebedee port to android</string>
+	<string name="about_description">
+	    <![CDATA[<strong>version 0.2<br>zebedee (jzbd) ported to Android platform</strong> by idleloop: <br>]]>
+	      <![CDATA[<a href="http://www.angelfire.com/ego2/idleloop">www.angelfire.com/ego2/idleloop</a><br>]]>
+	      <![CDATA[<a href="mailto:idleloop@yahoo.com">idleloop@yahoo.com</a><br><br>]]>	      
+	    Original program at: <![CDATA[<br>]]>
+	      <![CDATA[<a href="http://www.winton.org.uk/zebedee/">www.winton.org.uk/zebedee</a><br>]]>
+	    Zebedee\'s java version (jzbd) at: <![CDATA[<br>]]>
+	      <![CDATA[<a href="http://sourceforge.net/projects/zebedee/">sourceforge.net/projects/zebedee</a><br><br>]]>
+	    All licensed under <![CDATA[<br><a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License (GPL)</a><br>]]>
+	</string>
+	<string name="about_description_button">OK</string>
+		
+</resources>

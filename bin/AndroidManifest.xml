@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.zebedee"
+    android:versionCode="2"
+    android:versionName="0.2" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <!-- http://developer.android.com/guide/topics/resources/runtime-changes.html#HandlingTheChange -->
+        <!-- http://stackoverflow.com/questions/5913130/dont-reload-application-when-orientation-changes -->
+        <activity
+            android:name="com.example.zebedee.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ua.com.vassiliev.androidfilebrowser.FileBrowserActivity" android:label="@string/filebrowser_name"></activity>
+    </application>
+
+</manifest>

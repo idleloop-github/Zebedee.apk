@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:onClick="selectParametersFile"
+        android:text="@string/filename_label" />
+
+    <TextView
+        android:id="@+id/TextView_filename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button1"
+        android:ems="10"
+        android:enabled="false"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/filename" >
+
+        <requestFocus android:layout_width="wrap_content" />
+
+    </TextView>
+
+    <ScrollView
+        android:id="@+id/log_scroller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/toggleButton1"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+	    <TextView
+	        android:id="@+id/log_text"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:gravity="left"
+	        android:singleLine="false"
+	        android:text="@string/initiallogtext" />
+
+	</ScrollView>
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView_filename"
+        android:layout_centerHorizontal="true"
+        android:onClick="activateZebedee"
+        android:text="@string/label_off"
+        android:textOff="@string/label_off"
+        android:textOn="@string/label_on" />
+
+</RelativeLayout>
