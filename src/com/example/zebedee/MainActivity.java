@@ -179,7 +179,7 @@ public class MainActivity extends FragmentActivity { //A//
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 	    // TODO Auto-generated method stub
 	    if (requestCode == REQUEST_CODE_PICK_FILE) {
-	            if(resultCode == this.RESULT_OK) {
+	            if(resultCode == RESULT_OK) {
 	                String newFile = data.getStringExtra(
 	                        ua.com.vassiliev.androidfilebrowser.FileBrowserActivity.returnFileParameter);
 	                Toast.makeText(
