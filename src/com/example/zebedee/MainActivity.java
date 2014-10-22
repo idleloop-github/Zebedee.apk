@@ -60,7 +60,7 @@ public class MainActivity extends FragmentActivity { //A//
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_main, menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
@@ -179,7 +179,7 @@ public class MainActivity extends FragmentActivity { //A//
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 	    // TODO Auto-generated method stub
 	    if (requestCode == REQUEST_CODE_PICK_FILE) {
-	            if(resultCode == this.RESULT_OK) {
+	            if(resultCode == RESULT_OK) {
 	                String newFile = data.getStringExtra(
 	                        ua.com.vassiliev.androidfilebrowser.FileBrowserActivity.returnFileParameter);
 	                Toast.makeText(
