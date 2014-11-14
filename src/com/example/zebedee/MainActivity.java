@@ -37,6 +37,8 @@ public class MainActivity extends FragmentActivity { //A//
 	
 	public String strLog;
 
+	boolean bChkLogOff=false;
+	
 	Zebedee zebedee_thread;
 	
 	private final int REQUEST_CODE_PICK_DIR = 1;
@@ -60,7 +62,7 @@ public class MainActivity extends FragmentActivity { //A//
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
 
@@ -86,7 +88,9 @@ public class MainActivity extends FragmentActivity { //A//
 	}
 	
 	public void setLogString(String strLog){
-		this.strLog=this.strLog + strLog;
+		if ( bChkLogOff == false ) {
+			this.strLog=this.strLog + strLog;
+		}
 		//this.strLog=strLog;
 	}
 	
@@ -110,6 +114,18 @@ public class MainActivity extends FragmentActivity { //A//
         });
 	}
 	
+	// toggle show/hide logs
+	public void chkLogOff_toggle(View v) {
+		if ( bChkLogOff == false) {
+			bChkLogOff=true;
+			this.strLog=this.strLog + "\nLogs deactivated.\n\n";
+		} else {
+			bChkLogOff=false;
+			this.strLog=this.strLog + "\nLogs activated.\n\n";
+		}
+		showLog();
+	}
+		
 	public void onAboutItemClick(MenuItem item){
 		
 		// show about content on log window, just in case v<2.2 => About is not shown (?)

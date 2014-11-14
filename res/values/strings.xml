@@ -7,13 +7,14 @@
     <string name="filename_label">choose zebedee parameters file</string>
     <string name="label_off">click to start zebedee</string>
     <string name="label_on">click to close app</string>
-    <string name="initiallogtext">[zebedee port to android]\n\nversion 0.2\nzebedee (jzbd) ported to Android platform by idleloop: \n  www.angelfire.com/ego2/idleloop\n  idleloop@yahoo.com\n\nOriginal program at: \n  www.winton.org.uk/zebedee\nZebedee\'s java version (jzbd) at: \n  sourceforge.net/projects/zebedee\n\nAll licensed under \nGNU General Public License (GPL)\n</string>
+    <string name="checkbox_log_off">log off</string>
+    <string name="initiallogtext">[zebedee port to android]\n\nversion 0.3 (Nov 2014)\nzebedee (jzbd) ported to Android platform by idleloop: \n  www.angelfire.com/ego2/idleloop\n  idleloop@yahoo.com\n\nOriginal program at: \n  www.winton.org.uk/zebedee\nZebedee\'s java version (jzbd) at: \n  sourceforge.net/projects/zebedee\n\nAll licensed under \nGNU General Public License (GPL)\n</string>
 	<string name="filebrowser_name">select zebedee parameters file</string>
 	<string name="submenu_about">About&#8230;</string>
 	<string name="submenu_exit">Exit</string>
 	<string name="about_description_header">Zebedee port to android</string>
 	<string name="about_description">
-	    <![CDATA[<strong>version 0.2<br>zebedee (jzbd) ported to Android platform</strong> by idleloop: <br>]]>
+	    <![CDATA[<strong>version 0.3 (Nov 2014)<br>zebedee (jzbd) ported to Android platform</strong> by idleloop: <br>]]>
 	      <![CDATA[<a href="http://www.angelfire.com/ego2/idleloop">www.angelfire.com/ego2/idleloop</a><br>]]>
 	      <![CDATA[<a href="mailto:idleloop@yahoo.com">idleloop@yahoo.com</a><br><br>]]>	      
 	    Original program at: <![CDATA[<br>]]>

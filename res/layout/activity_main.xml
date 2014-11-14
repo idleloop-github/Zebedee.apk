@@ -44,19 +44,31 @@
 	    <TextView
 	        android:id="@+id/log_text"
 	        android:layout_width="fill_parent"
-	        android:layout_height="fill_parent"
+	        android:layout_height="wrap_content"
 	        android:gravity="left"
 	        android:singleLine="false"
 	        android:text="@string/initiallogtext" />
 
 	</ScrollView>
 
+    <CheckBox
+        android:id="@+id/chkLogOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton1"
+        android:layout_alignBottom="@+id/toggleButton1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_alignEnd="@+id/button1"
+        android:text="@string/checkbox_log_off" 
+        android:onClick="chkLogOff_toggle" />
+
     <ToggleButton
         android:id="@+id/toggleButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignStart="@+id/button1"
         android:layout_below="@+id/TextView_filename"
-        android:layout_centerHorizontal="true"
         android:onClick="activateZebedee"
         android:text="@string/label_off"
         android:textOff="@string/label_off"
