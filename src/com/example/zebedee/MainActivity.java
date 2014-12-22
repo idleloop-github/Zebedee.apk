@@ -139,7 +139,7 @@ public class MainActivity extends FragmentActivity { //A//
 	}
 
 	// http://developer.android.com/guide/topics/ui/dialogs.html#AlertDialog
-	public class AboutDialogFragment extends DialogFragment {
+	public static class AboutDialogFragment extends DialogFragment {
 	    @Override
 	    public Dialog onCreateDialog(Bundle savedInstanceState) {
 	        // Use the Builder class for convenient dialog construction
