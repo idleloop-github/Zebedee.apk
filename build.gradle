@@ -1,15 +1,18 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
-        jcenter()
+        google() // Add this
+        mavenCentral() // Add this
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        // Change 1.0.0 to a version compatible with Gradle 8.x
+        // For Gradle 8.13, use 8.3.0 or similar
+        classpath 'com.android.tools.build:gradle:8.3.0'
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
+        google()
+        mavenCentral()
     }
 }
