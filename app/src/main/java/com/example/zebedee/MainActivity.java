@@ -4,12 +4,12 @@ import java.util.Date;
 
 //import android.R.layout;//
 //A//import android.app.Activity;
-import android.support.v4.app.FragmentActivity; //A//
+import androidx.fragment.app.FragmentActivity; //A//
 import android.app.Dialog;
 //import android.app.FragmentManager;
 //import android.support.v4.app.FragmentManager; //A//
 //A//import android.app.DialogFragment;
-import android.support.v4.app.DialogFragment; //A//
+import androidx.fragment.app.DialogFragment; //A//
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
