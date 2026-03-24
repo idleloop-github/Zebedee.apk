@@ -1,5 +1,6 @@
 package com.example.zebedee;
 
+import java.io.File;
 import java.util.Date;
 
 //import android.R.layout;//
@@ -28,6 +29,7 @@ import android.view.View;		// FOCUS_DOWN
 import android.widget.ScrollView;
 import android.widget.Toast;
 import android.app.AlertDialog;
+import android.widget.ToggleButton;
 
 //A//public class MainActivity extends Activity {
 public class MainActivity extends FragmentActivity { //A//
@@ -94,6 +96,25 @@ public class MainActivity extends FragmentActivity { //A//
 	}
 
 	public void activateZebedee(View v){
+        // 1. Check if the file exists before doing anything
+        File file = new File(parametersFile);
+        if (!file.exists()) {
+            // --- DEACTIVATE THE BUTTON STATE ---
+            if (v instanceof ToggleButton) {
+                ((ToggleButton) v).setChecked(false);
+            } else {
+                v.setActivated(false);
+            }
+
+            // Show a message to the user instead of crashing
+            Toast.makeText(this, "Error: The parameters file does not exist!", Toast.LENGTH_LONG).show();
+
+            // Log it to your internal log window too
+            strLog = strLog + "\n[ERROR] Cannot start: File not found: " + parametersFile + "\n";
+            showLog();
+            return; // Stop execution here
+        }
+        // 2. Continue
 		if (zebedee_thread == null) {
 			//zebedee_thread = new Zebedee(parametersFile, textView_log);
 			strLog=strLog + "\n\nZebedee started at " + new Date() + "\n";
