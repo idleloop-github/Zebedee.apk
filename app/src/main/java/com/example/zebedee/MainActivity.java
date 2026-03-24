@@ -12,6 +12,9 @@ import android.app.Dialog;
 import androidx.fragment.app.DialogFragment; //A//
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
+import android.provider.Settings;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.Html;
@@ -51,6 +54,9 @@ public class MainActivity extends FragmentActivity { //A//
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+        checkStoragePermission();
+
 		textView_filename = (TextView)findViewById(R.id.TextView_filename);
 		textView_filename.setText(parametersFile, TextView.BufferType.EDITABLE);
 		textView_log = (TextView)findViewById(R.id.log_text);
@@ -58,6 +64,27 @@ public class MainActivity extends FragmentActivity { //A//
     	scrollView_log = (ScrollView)findViewById(R.id.log_scroller);
     	strLog=getResources().getString(R.string.initiallogtext);
 	}
+
+    // Inside an initialization method or onCreate
+    private void checkStoragePermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            if (!Environment.isExternalStorageManager()) {
+                try {
+                    Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+                    intent.addCategory("android.intent.category.DEFAULT");
+                    intent.setData(Uri.parse(String.format("package:%s", getApplicationContext().getPackageName())));
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Intent intent = new Intent();
+                    intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+                    startActivity(intent);
+                }
+            }
+        } else {
+            // For Android 10 and below, use the old requestPermissions method
+            // for READ_EXTERNAL_STORAGE and WRITE_EXTERNAL_STORAGE
+        }
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
