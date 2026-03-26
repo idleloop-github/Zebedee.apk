@@ -1,7 +1,7 @@
 Zebedee tunnel for Android
 ==============================
 
-This package ports [Zebedee](http://www.winton.org.uk/zebedee/index.html) code ([jzbd java version](http://sourceforge.net/projects/zebedee/files/jzbd/20011010)) to the Android platform (all android versions since 2.1 to at least 4.4).
+This package ports [Zebedee](http://www.winton.org.uk/zebedee/index.html) code ([jzbd java version](http://sourceforge.net/projects/zebedee/files/jzbd/20011010)) to the Android platform (to at least Android version 14).
 
 Zebedee is a simple program to establish an encrypted, compressed "tunnel" for TCP/IP or UDP data transfer between two systems. This allows traffic such as telnet, ftp and X to be protected from snooping as well as potentially gaining performance over low-bandwidth networks from compression. (As [stated on its web](http://www.winton.org.uk/zebedee/))
 
