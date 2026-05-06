@@ -8,8 +8,8 @@ android {
         applicationId "com.example.zebedee"
         minSdkVersion 21
         targetSdkVersion 34
-        versionCode 1
-        versionName '0.4'
+        versionCode 2
+        versionName '0.5'
     }
 
     compileOptions {

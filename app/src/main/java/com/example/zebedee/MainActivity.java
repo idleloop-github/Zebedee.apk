@@ -99,7 +99,7 @@ public class MainActivity extends FragmentActivity { //A//
         // 1. Check if the file exists before doing anything
         File file = new File(parametersFile);
         if (!file.exists()) {
-            // --- DEACTIVATE THE BUTTON STATE ---
+            // Deactivate ToggleButton
             if (v instanceof ToggleButton) {
                 ((ToggleButton) v).setChecked(false);
             } else {
@@ -117,9 +117,21 @@ public class MainActivity extends FragmentActivity { //A//
         // 2. Continue
 		if (zebedee_thread == null) {
 			//zebedee_thread = new Zebedee(parametersFile, textView_log);
-			strLog=strLog + "\n\nZebedee started at " + new Date() + "\n";
-			showLog();
-			zebedee_thread = new Zebedee(parametersFile, this);
+            try {
+                zebedee_thread = new Zebedee(parametersFile, this);
+                strLog = strLog + "\n\nZebedee started at " + new Date() + "\n";
+                showLog();
+            } catch (Exception e) { // Catch possible errors
+                zebedee_thread = null; // be sure to make this null
+
+                // Deactivate ToggleButton
+                if (v instanceof ToggleButton) {
+                    ((ToggleButton) v).setChecked(false);
+                }
+
+                strLog = strLog + "\n"; // additional line to separate logs
+                showLog();
+            }
 		} else {
 			exitZebedee();
 		}

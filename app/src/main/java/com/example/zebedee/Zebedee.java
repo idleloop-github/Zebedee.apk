@@ -135,8 +135,8 @@ public class Zebedee
     public static void main(String args[]) throws Exception
     {
     */
-    //Zebedee(String parametersFile) //throws Exception
-    Zebedee(String parametersFile, MainActivity activity) //throws Exception
+    //Zebedee(String parametersFile) throws Exception
+    Zebedee(String parametersFile, MainActivity activity) throws Exception
     {
         
     // [[idleloop]] 20130223: modified logger to show messages on activity screen	
@@ -260,8 +260,8 @@ public class Zebedee
 	{
 	    master.logger.setTag(master.programName);
 	    master.logger.error(e.toString());
-	    System.exit(1);
-	}
+        throw e;
+    }
 
 	master.logger.setTag(master.programName);
 
